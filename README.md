@@ -8,7 +8,7 @@ Libreria para generar tokens con JWT (Firebase)
 composer require antoniosam/tokenjwt
 ```
 
-##Uso
+## Uso
 
 **$data Debe ser arreglo** 
 
