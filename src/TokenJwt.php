@@ -45,7 +45,7 @@ class TokenJwt
     public function validate($jwt){
         try{
             $decode = JWT::decode($jwt, $this->key, ['HS256']);
-            $this->datadecode = $decode->data;
+            $this->datadecode = (array) $decode->data;
             $this->decodesuccess = true;
             return true;
         }catch (\Exception $e){
@@ -89,7 +89,7 @@ class TokenJwt
     /**
      * @param $key
      * @param $jwt
-     * @return null
+     * @return array|null
      */
     public static function validaToken($key,$jwt){
         $obj = new self($key);
